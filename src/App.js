@@ -1,23 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import { useEffect, useState } from "react";
+import ChatList from "./ChatList";
+import ChatSpace from "./ChatSpace";
+import "./App.css";
 function App() {
+  const [data, setData] = useState([]);
+  const [user,setUser] = useState()
+  const [loading, setLoading] = useState(false);
+
+  const Members = async () => {
+    setLoading(true);
+    await fetch("https://dummyjson.com/users")
+      .then((res) => res.json())
+      .then((response) => setData(response.users));
+    setLoading(false);
+  };
+  useEffect(() => {
+    Members();
+  }, []);
+
+  const captureUserData = (d) => {
+    data.filter((user) => {
+      if (user.id === d.id) {
+        setUser(user)
+      }
+      return user
+    });
+  };
+
+  console.log(data);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="part1">
+        <ChatList data={data} loading={loading} captureUserData={captureUserData} />
+      </div>
+      <div className="part2">
+        <ChatSpace user={user} />
+      </div>
     </div>
   );
 }

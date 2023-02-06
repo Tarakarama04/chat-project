@@ -1,0 +1,46 @@
+.Chats{
+    display:flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    padding-top: 8px;
+    height:8em;
+    width: 100%;
+    background-color: rgb(230, 188, 129);
+    border-bottom: 2px solid rgb(238, 174, 96);
+    border-radius: 5%;
+}
+.chatlist{
+    background-color:  rgb(230, 188, 129);
+    height:100vh;
+    overflow:scroll;
+}
+.profile_pic{
+    height: 6em;
+    width: 6em;
+    border:2px solid rgb(117, 35, 35);
+    border-radius: 50%;
+}
+.profile_name{
+    box-sizing: border-box;
+    padding-right: 60%;
+    line-height: 5px;
+    width: 80%;
+
+    
+}
+nav{
+    width:100%;
+    height:4em;
+    display: flex;
+    position:static;
+    justify-content: space-around;
+    background-color: rgb(117, 35, 35);
+    border-bottom: 2px solid rgb(230, 188, 129);
+    
+}
+.dp{
+    height:3.5em;
+    width:3.5em;
+    border-radius: 50%;
+    border :4px solid rgb(230, 188, 129)
+}

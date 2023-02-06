@@ -1,0 +1,63 @@
+.chat_box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color:rgb(230, 188, 129) ;
+    margin-right: 0;
+    height:100vh;
+    box-sizing: border-box;
+
+}
+.content{
+    margin-top: 0%;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    overflow: scroll;
+}
+.Chatbox_nav{
+    margin-bottom:0%;
+}
+.text_area{
+    display: flex;
+    width:100%;
+    background-color: rgb(118, 37, 37);
+    border:2px solid rgb(240, 156, 29);
+
+    
+}
+.text_box{
+    display:flex;
+    margin-left: 10%;
+    flex:0.9;
+    height:2.5em;
+    background-color:rgb(230, 188, 129);
+    border-radius: 5%;
+}
+.send_btn{
+    display: flex;
+    align-items: center;
+    background-color:rgb(230, 188, 129);
+    border-top-right-radius:60%;
+    border-bottom-right-radius: 50%;
+    border: 2px solid rgb(57, 56, 53);
+    width:10%;
+    margin-left:18px;
+}
+.msg{
+    max-width:10em; 
+    align-items: center;
+    
+    margin: 4px;
+    max-height: 2.5em;
+    background-color:rgb(193, 103, 103) ;
+    border-radius: 18%;
+    border:2px solid rgb(230, 188, 129);
+}
+.frnd_dp{
+    height:3.5em;
+    width:3.5em;
+    border-radius: 50%;
+    border :4px solid rgb(230, 188, 129)
+}
